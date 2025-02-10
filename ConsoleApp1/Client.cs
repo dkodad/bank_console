@@ -22,7 +22,7 @@ namespace ConsoleApp1
 
         public void Update(decimal balance)
         {
-            Console.WriteLine($"Klient {Name} byl informován o změně zůstatku: {balance} Kč");
+            Console.WriteLine($"\tKlient {Name} byl informován o změně zůstatku: {balance} Kč");
         }
     }
 }

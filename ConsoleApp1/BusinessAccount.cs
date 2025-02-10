@@ -34,7 +34,7 @@ namespace ConsoleApp1
             }
             else
             {
-                Console.WriteLine("⛔ Nedostatečný zůstatek nebo překročený limit pro výběr.");
+                Console.WriteLine("\t Nedostatečný zůstatek nebo překročený limit pro výběr.");
             }
         }
 

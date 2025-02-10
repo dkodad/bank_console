@@ -50,20 +50,20 @@ namespace ConsoleApp1
 
         if (fromAccount == null || toAccount == null)
         {
-            Console.WriteLine("⛔ Jeden z účtů nebyl nalezen.");
+            Console.WriteLine("\tJeden z účtů nebyl nalezen.");
             return;
         }
 
         if (amount <= 0)
         {
-            Console.WriteLine("⛔ Částka pro převod musí být kladná.");
+            Console.WriteLine("Částka pro převod musí být kladná.");
             return;
         }
 
         // Zkontroluj, zda je na účtu dostatek peněz pro převod
         if (fromAccount.Balance < amount)
         {
-            Console.WriteLine("⛔ Nedostatečný zůstatek pro převod.");
+            Console.WriteLine("\tNedostatečný zůstatek pro převod.");
             return;
         }
 
@@ -71,7 +71,7 @@ namespace ConsoleApp1
         fromAccount.Withdraw(amount); // Nejprve odečteme částku z účtu odesílatele
         toAccount.Deposit(amount);    // Poté přičteme částku na účet příjemce
 
-        Console.WriteLine($"✅ {amount} Kč bylo převedeno z účtu {fromAccountNumber} na účet {toAccountNumber}.");
+        Console.WriteLine($"\t{amount} Kč bylo převedeno z účtu {fromAccountNumber} na účet {toAccountNumber}.");
     }
 
     }

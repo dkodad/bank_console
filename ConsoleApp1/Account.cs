@@ -42,7 +42,7 @@ namespace ConsoleApp1
         }
         public void ShowBalance()
         {
-            Console.WriteLine($"💰 Zůstatek na účtu {AccountNumber}: {Balance} Kč");
+            Console.WriteLine($"\t Zůstatek na účtu {AccountNumber}: {Balance} Kč");
         }
         public abstract void Withdraw(decimal amount);
     }
