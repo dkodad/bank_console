@@ -49,6 +49,7 @@
     <Compile Include="BusinessAccount.cs" />
     <Compile Include="CheckingAccount.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="IAccountObserver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavingsAccount.cs" />

@@ -10,21 +10,16 @@ namespace ConsoleApp1
     {
         public static Account CreateAccount(string type, string accountNumber)
         {
-            if (type == "checking")
+            switch (type.ToLower())
             {
-                return new CheckingAccount(accountNumber);
-            }
-            else if (type == "savings")
-            {
-                return new SavingsAccount(accountNumber);
-            }
-            else if (type == "business")
-            {
-                return new BusinessAccount(accountNumber);
-            }
-            else
-            {
-                throw new ArgumentException("Neplatný typ účtu");
+                case "checking":
+                    return new CheckingAccount(accountNumber);
+                case "business":
+                    return new BusinessAccount(accountNumber);
+                case "savings":
+                    return new SavingsAccount(accountNumber);
+                default:
+                    throw new ArgumentException("Neplatný typ účtu");
             }
         }
     }
