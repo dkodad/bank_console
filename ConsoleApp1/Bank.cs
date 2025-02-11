@@ -36,7 +36,8 @@ namespace ConsoleApp1
             var account = _accounts.FirstOrDefault(a => a.AccountNumber == accountNumber);
             if (account != null)
             {
-                account.Deposit(amount); // nebo account.Withdraw(amount);
+                account.Deposit(amount); 
+                // account.Withdraw(amount);
             }
             else
             {
@@ -60,16 +61,16 @@ namespace ConsoleApp1
             return;
         }
 
-        // Zkontroluj, zda je na účtu dostatek peněz pro převod
+        
         if (fromAccount.Balance < amount)
         {
             Console.WriteLine("\tNedostatečný zůstatek pro převod.");
             return;
         }
 
-        // Proveď převod
-        fromAccount.Withdraw(amount); // Nejprve odečteme částku z účtu odesílatele
-        toAccount.Deposit(amount);    // Poté přičteme částku na účet příjemce
+        
+        fromAccount.Withdraw(amount); 
+        toAccount.Deposit(amount);    
 
         Console.WriteLine($"\t{amount} Kč bylo převedeno z účtu {fromAccountNumber} na účet {toAccountNumber}.");
     }

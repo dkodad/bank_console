@@ -86,10 +86,10 @@ namespace ConsoleApp1
                         Console.Write("Zadejte částku k výběru: ");
                         if (decimal.TryParse(Console.ReadLine(), out decimal withdrawAmount) && withdrawAmount > 0)
                         {
-                            Account account = bank.GetAccount(withdrawAccount); // Získáme účet podle čísla účtu
+                            Account account = bank.GetAccount(withdrawAccount); 
                             if (account != null)
                             {
-                                // Zavoláme metodu Withdraw a pokud není dostatek peněz, metoda si s tím poradí
+                                
                                 account.Withdraw(withdrawAmount);
                             }
                             else
